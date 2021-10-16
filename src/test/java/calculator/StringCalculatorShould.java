@@ -51,7 +51,7 @@ class StringCalculatorShould {
     
     @Test
     void get_called_count() throws Exception {
-    	stringCalculator.getCalledCount();
+    	assertTrue(stringCalculator.getCalledCount()>0);
     }
     
     @Test
@@ -59,4 +59,8 @@ class StringCalculatorShould {
     	assertEquals(8, stringCalculator.add("***%%%\n1***2%5"));
     }
     
+    @Test
+    void multiple_delimeters() throws Exception {
+    	assertEquals(6, stringCalculator.add("*%\n1*2%3"));
+    }
 }
