@@ -28,4 +28,9 @@ class StringCalculatorShould {
     void newLine_between_two_numbers_return_sum() {
     	assertEquals(3, stringCalculator.add("1\n,2"));
     }
+    
+    @Test
+    void newLine_between_three_numbers_return_sum() {
+    	assertEquals(6, stringCalculator.add("1\n,2,\n3"));
+    }
 }
