@@ -63,4 +63,9 @@ class StringCalculatorShould {
     void multiple_delimeters() throws Exception {
     	assertEquals(6, stringCalculator.add("*%\n1*2%3"));
     }
+    
+    @Test
+    void multiple_delimeters_any_length() throws Exception {
+    	assertEquals(6, stringCalculator.add("**%%\n1**2%%3"));
+    }
 }
