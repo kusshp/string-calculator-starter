@@ -11,7 +11,7 @@ class StringCalculator {
     		return Integer.parseInt(input);
     	}
     	
-    	String[] nums = input.split(",");
+    	String[] nums = input.split("[,|\n]+");
     	
     	if(!input.isEmpty()) {
     		return Integer.parseInt(nums[0]) + Integer.parseInt(nums[1]);
