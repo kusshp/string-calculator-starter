@@ -10,6 +10,12 @@ class StringCalculator {
     	if(input.length() == 1) {
     		return Integer.parseInt(input);
     	}
+    	
+    	String[] nums = input.split(",");
+    	
+    	if(!input.isEmpty()) {
+    		return Integer.parseInt(nums[0]) + Integer.parseInt(nums[1]);
+    	}
     	return 0;
     }
 
