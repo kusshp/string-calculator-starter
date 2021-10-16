@@ -53,4 +53,10 @@ class StringCalculatorShould {
     void get_called_count() throws Exception {
     	stringCalculator.getCalledCount();
     }
+    
+    @Test
+    void any_length_delimeters() throws Exception {
+    	assertEquals(8, stringCalculator.add("***%%%\n1***2%5"));
+    }
+    
 }
