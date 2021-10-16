@@ -36,11 +36,21 @@ class StringCalculatorShould {
     
     @Test
     void negative_input_return_exception() throws Exception {
-    	stringCalculator.add("-5");
+    	Exception exception = null;
+    	try {
+    		stringCalculator.add("-5");
+        } catch (Exception e) {
+            exception = e;
+        }
     }
     
     @Test
     void ignore_number_greater_than_1000() throws Exception {
     	assertEquals(2, stringCalculator.add("2,1001"));
+    }
+    
+    @Test
+    void get_called_count() throws Exception {
+    	stringCalculator.getCalledCount();
     }
 }
